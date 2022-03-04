@@ -1,0 +1,17 @@
+<FirstLogonCommands>
+    <SynchronousCommand>
+        <CommandLine>cmd /c "mkdir C:\Azure"</CommandLine>
+        <Description>Create the Azure working directory</Description>
+        <Order>11</Order>
+    </SynchronousCommand>
+    <SynchronousCommand>
+        <CommandLine>cmd /c "copy C:\AzureData\CustomData.bin C:\Azure\CustomData.ps1"</CommandLine>
+        <Description>Copy the CustomData file to the Azure working directory</Description>
+        <Order>12</Order>
+    </SynchronousCommand>
+    <SynchronousCommand>
+        <CommandLine>powershell.exe -Sta -ExecutionPolicy Unrestricted -file C:\Azure\CustomData.ps1</CommandLine>
+        <Description>Run the custom data script</Description>
+        <Order>13</Order>
+    </SynchronousCommand>
+</FirstLogonCommands>
