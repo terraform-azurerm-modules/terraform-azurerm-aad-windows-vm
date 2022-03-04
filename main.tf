@@ -61,7 +61,7 @@ resource "azurerm_windows_virtual_machine" "vm" {
   # Run the custom data PowerShell script
   additional_unattend_content {
     setting = "FirstLogonCommands"
-    content = file("${path.module}/files/FirstLogonCommands.xml")
+    content = file("${path.module}/FirstLogonCommands.xml")
   }
 
   identity {
