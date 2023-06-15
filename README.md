@@ -1,4 +1,4 @@
-# terraform-azurerm-arc-onprem-windows-vm
+# terraform-azurerm-aad-windows-vm
 
 Module to create an Azure VM with the AAD extension configured. Uses the Windows Server 2022 Azure Edition for hot patching benefits.
 
